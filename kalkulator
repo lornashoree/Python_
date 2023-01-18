@@ -1,0 +1,57 @@
+import math
+
+def kalulator():
+    while True:
+        tablica = []
+        how_numb = int(input("Ile liczb?"))
+
+
+        for i in range(how_numb):
+            tablica.append(float(input("Jakie liczby ?")))
+
+
+
+        print("Wybierz co chcesz zrobić:\n + \n- \n* \n/ ")
+        choose = str(input())
+
+
+        #operacje liczbowe:
+
+        if choose == "+":
+
+            total = tablica[0] 
+            for x in tablica[1:]:
+                
+                total += x
+
+            print(total)
+            break
+
+        elif choose == "-":
+
+            total1 = tablica[0]
+            for y in tablica[1:]:
+                
+                total1 -=y
+
+            print(total1)
+            break
+
+        elif choose == "*":
+            total2 = tablica[0]
+            for z in tablica[1:]:
+                
+                total2 *= z
+            print(total2)
+            break
+
+        elif choose == "/":
+            total3 = tablica[0]
+            for p in tablica[1:]:
+                
+                total3 /= p
+            print(total3)
+            break
+        else:
+            print("Musisz wpisać jeden ze znaków, zacznij od poczatku...")
+kalulator()
